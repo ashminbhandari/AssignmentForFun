@@ -17,112 +17,101 @@ public class BasicStringsTest {
 
     @Test
     public void flipConcatTest1(){
-        // Given
-        String string1 = " Bunny";
-        String string2 = "Bugs";
-        String expected = "Bugs Bunny";
-        // When
+        String string1 = " Inverted";
+        String string2 = "String";
+        String expected = "String Inverted";
         String actual = basicStrings.flipConcat(string1, string2);
-        // Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void flipConcatTest2(){
-        // Given
-        String string1 = " Go";
-        String string2 = "Let's";
-        String expected = "Let's Go";
-        // When
+        String string1 = "STOP";
+        String string2 = "IMMEDIATE";
+        String expected = "IMMEDIATESTOP";
+
         String actual = basicStrings.flipConcat(string1, string2);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
 
     @Test
     public void flipConcatTest3(){
-        // Given
-        String string1 = "Mario!";
+        String string1 = "HERO!";
         String string2 = "It's a me! ";
-        String expected = "It's a me! Mario!";
-        // When
+        String expected = "It's a me! HERO!";
+
         String actual = basicStrings.flipConcat(string1, string2);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getCharTest1(){
-        // Given
-        String string1 = "You can do this!";
-        char expected = 'c';
-        // When
+        String string1 = "LET US PARTY";
+        char expected = 'U';
+
         char actual = basicStrings.getChar(string1, 4);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getCharTest2(){
-        // Given
         String string1 = "You can do this!";
-        char expected = '!';
-        // When
-        char actual = basicStrings.getChar(string1, 15);
-        // Then
+        char expected = ' ';
+
+        char actual = basicStrings.getChar(string1, 3);
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void iCantSeeTest1(){
-        // Given
-        String string1 = "Haters";
+        String string1 = "caters";
         String expected = "      ";
-        // When
+
         String actual = basicStrings.iCantSee(string1);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void iCantSeeTest2(){
-        // Given
-        String string1 = "I Can't Do It";
+        String string1 = "I Can-t Do It";
         String expected = "             ";
-        // When
+
         String actual = basicStrings.iCantSee(string1);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void iCantSeeTest3(){
-        // Given
         String string1 = "";
         String expected = "";
-        // When
+
         String actual = basicStrings.iCantSee(string1);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void loudAndClearTest1(){
-        // Given
         String string = "";
         String expected = "";
-        // When
+
         String actual = basicStrings.loudAndClear(string);
-        // Then
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void loudAndClearTest2(){
         // Given
-        String string = "lEt mE hEaR yOu";
-        String expected = "LET ME HEAR YOU";
+        String string = "leT us PARTY";
+        String expected = "LET US PARTY";
         // When
         String actual = basicStrings.loudAndClear(string);
         // Then
@@ -132,8 +121,8 @@ public class BasicStringsTest {
     @Test
     public void reverseCaseTest1(){
         // Given
-        String string = "lEt mE hEaR yOu";
-        String expected = "LeT Me HeAr YoU";
+        String string = "LETsS DANCE";
+        String expected = "letSs dance";
         // When
         String actual = basicStrings.reverseCase(string);
         // Then
@@ -143,8 +132,8 @@ public class BasicStringsTest {
     @Test
     public void reverseCaseTest2(){
         // Given
-        String string = "I love Y'ALL!";
-        String expected = "i LOVE y'all!";
+        String string = "i love yall";
+        String expected = "I LOVE YALL";
         // When
         String actual = basicStrings.reverseCase(string);
         // Then
